@@ -7,23 +7,25 @@
 #include <ezButton.h>
 
 // PIN DHT Digital
-#define DHT_PIN 21
+#define DHT_PIN 13
 #define DHT_SENSOR_TYPE DHT11
 
 // PIN Limit Switch  Digital
-#define LIMIT_SWITCH_PIN_1 10
-#define LIMIT_SWITCH_PIN_2 12
+#define LIMIT_SWITCH_PIN_1 15
+#define LIMIT_SWITCH_PIN_2 2
 
 // PIN LDR Analog
-#define LDR_PIN 1
+#define LDR_PIN 34
+
+// PIN Driver Digital
+#define DRIVER_PIN_1 32
+#define DRIVER_PIN_2 33
 
 // PIN Driver Analog
-#define DRIVER_PIN_1 2
-#define DRIVER_PIN_2 5
 #define DRIVER_EN 6
 
 // PIN Raindrop Sensor Analog
-#define RAINDROP_PIN 3
+#define RAINDROP_PIN 25
 
 // Instansiasi dht
 DHT dht_sensor(DHT_PIN, DHT_SENSOR_TYPE);
