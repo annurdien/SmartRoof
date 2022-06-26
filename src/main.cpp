@@ -17,7 +17,8 @@
 // PIN LDR Analog
 #define LDR_PIN 34
 
-// PIN Driver Digital
+// PIN Driver Digital,
+// digunakan untuk menentukan arah gerakan motor
 #define DRIVER_PIN_1 32
 #define DRIVER_PIN_2 33
 
@@ -70,7 +71,7 @@ boolean isDark()
 {
   const int treshold = 800;
 
-  float sensorValue = analogRead(RAINDROP_PIN);
+  float sensorValue = analogRead(LDR_PIN);
 
   if (sensorValue < treshold)
   {
