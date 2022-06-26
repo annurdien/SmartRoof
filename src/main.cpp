@@ -38,6 +38,7 @@ ezButton limSwitchClosed(LIMIT_SWITCH_PIN_2);
 boolean isHumid()
 {
 
+  // This is the treshold for humidity.
   const int treshold = 65;
 
   float humid = dht_sensor.readHumidity();
@@ -163,7 +164,11 @@ void loop()
   limSwitchOpenned.loop();
   limSwitchClosed.loop();
 
-  if (isDark() || (isRain() && isHumid()))
+  // If it's dark, night for example and no sign of rain, close the roof
+  // When it's rain and for sure it's humid, close the roof
+  // Otherwise open the roof
+
+  if ((isDark() || isRain()) || (isRain() && isHumid()))
   {
     closeRoof();
   }
